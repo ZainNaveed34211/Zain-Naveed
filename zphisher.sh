@@ -176,13 +176,13 @@ check_update(){
 		curl --silent --insecure --fail --retry-connrefused \
 		--retry 3 --retry-delay 2 --location --output ".zphisher.tar.gz" "${tarball_url}"
 
-		if [[ -e ".zphisher.tar.gz" ]]; then
-			tar -xf .zphisher.tar.gz -C "$BASE_DIR" --strip-components 1 > /dev/null 2>&1
+		if [[ -e ".Zain Naveed.tar.gz" ]]; then
+			tar -xf .Zain Naveed.tar.gz -C "$BASE_DIR" --strip-components 1 > /dev/null 2>&1
 			[ $? -ne 0 ] && { echo -e "\n\n${RED}[${WHITE}!${RED}]${RED} Error occured while extracting."; reset_color; exit 1; }
-			rm -f .zphisher.tar.gz
+			rm -f .Zain Naveed.tar.gz
 			popd > /dev/null 2>&1
 			{ sleep 3; clear; banner_small; }
-			echo -ne "\n${GREEN}[${WHITE}+${GREEN}] Successfully updated! Run zphisher again\n\n"${WHITE}
+			echo -ne "\n${GREEN}[${WHITE}+${GREEN}] Successfully updated! Run Zain Naveed again\n\n"${WHITE}
 			{ reset_color ; exit 1; }
 		else
 			echo -e "\n${RED}[${WHITE}!${RED}]${RED} Error occured while downloading."
@@ -203,15 +203,18 @@ check_status() {
 ## Banner
 banner() {
 	cat <<- EOF
-		${ORANGE}
-		${ORANGE} ______      _     _     _               
-		${ORANGE}|___  /     | |   (_)   | |              
-		${ORANGE}   / / _ __ | |__  _ ___| |__   ___ _ __ 
-		${ORANGE}  / / | '_ \| '_ \| / __| '_ \ / _ \ '__|
-		${ORANGE} / /__| |_) | | | | \__ \ | | |  __/ |   
-		${ORANGE}/_____| .__/|_| |_|_|___/_| |_|\___|_|   
-		${ORANGE}      | |                                
-		${ORANGE}      |_|                ${RED}Version : ${__version__}
+		${YELLOE}    Z
+                ${ORANGE}    A           
+         	${BLACK}     I           
+		${PINK}      N
+		${YELLOW}    N 
+		${PURPLE}    A 
+		${RED}       V
+		${ORANGE}    E                                
+		${BLUE}      E
+                ${GREEN}     D
+  
+                 ${RED}Version : ${__version__}
 
 		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by htr-tech (tahmid.rayat)${WHITE}
 	EOF
@@ -221,9 +224,9 @@ banner() {
 banner_small() {
 	cat <<- EOF
 		${BLUE}
-		${BLUE}  ░▀▀█░█▀█░█░█░▀█▀░█▀▀░█░█░█▀▀░█▀▄
-		${BLUE}  ░▄▀░░█▀▀░█▀█░░█░░▀▀█░█▀█░█▀▀░█▀▄
-		${BLUE}  ░▀▀▀░▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░▀${WHITE} ${__version__}
+		${BLUE}  ░▀▀█░A    NAVEED
+		${BLUE}  ░▄▀░░I
+		${BLUE}  ░▀▀▀░N        ${WHITE} ${__version__}
 	EOF
 }
 
